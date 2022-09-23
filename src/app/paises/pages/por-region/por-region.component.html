@@ -1,0 +1,16 @@
+<h3>Buscar por region <small>{{regionActiva}}</small></h3>
+
+<hr>
+
+<h5>Seleccione region</h5>
+
+<!-- [class.abc]="region === regionActiva" -->
+
+<div class="row">
+    <div class="col">
+        <button *ngFor="let region of regiones"
+        [class]="selectorCSS(region)"
+        
+        (click)="activarRegion(region)">{{region}}</button>
+    </div>
+</div>
